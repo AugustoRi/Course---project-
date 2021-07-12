@@ -1,0 +1,267 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+  height: 100%;
+  background-color: #ccc;
+}
+
+/*auxiliares*/
+
+.clear{clear: both;}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  /*
+  max-width: 1280px;
+  padding: 0 2%;
+  */
+}
+
+/*estilização principal*/
+
+header{
+  /*background-color: #5d4e45;*/
+  padding: 5px 10%;
+}
+
+.logo1{
+  float: left;
+  width: 170px;
+  height: 65px;
+  background-image: url(../images/logo1.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo2{
+  float: right;
+  width: 150px;
+  height: 60px;
+  background-image: url(../images/logo2.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section.cover-form{
+  width: 100%;
+  position: relative;
+}
+
+.cover-form .bg{
+  /*max-width: 1000px;*/
+  height: 550px;
+  background-image: url(../images/bg-form.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-container{
+  float: right;
+  margin: 8px 3% 0px 0px;
+  width: 400px;
+  background-color: rgba(192,192,192,0.8);
+  /*box-shadow*/
+}
+
+.form-container h2{
+  font-size: 18px;
+  font-weight: normal;
+  padding: 15px;
+  background-color: rgba(192,192,192,1);
+}
+
+.form-container form{
+  padding: 15px;
+}
+
+.form-wraper:not(:first-child){
+  margin-top: 30px;
+}
+
+/*:first-of-type*/
+.form-wraper span{
+  margin-top: 20px;
+}
+
+.form-wraper form p{
+  font-size: 18px;
+  color: #525252;
+}
+
+.form-wraper input{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 10px;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.form-wraper input[type=submit]{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 180px;
+  height: 60px;
+  background-color: rgba(3,60,80,0.9);
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+.form-wraper input[type=submit]:hover{
+  background-color: rgba(3,60,80,1);
+}
+
+section.cover-form .bottom{
+  /*substituir width para padding*/
+  background-color: rgb(1, 169, 247);
+  border-radius: 100%;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%;
+  max-width: 50px;
+  height: 50px;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+
+section.cover-form .bottom i{
+  font-size: 50px;
+}
+
+section.chamada{
+  width: 100%;
+  text-align: center;
+}
+
+section.chamada .container{
+  padding: 40px 0;
+  background-color: #5d4e45;
+}
+
+section.chamada h2{
+  color: #fff;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+section.chamada p{
+  margin-top: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+section.mosaico .container{
+  padding: 0px;
+}
+
+section.mosaico .flex-mosaico{
+  display: flex;
+}
+
+section.mosaico .flex-mosaico:not(:first-of-type){
+  margin-top: 20px;
+}
+
+.flex-mosaico .item1{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60%;
+  height: auto;
+  border: 5px solid #fff;
+}
+
+.flex-mosaico .item2{
+  width: 40%;
+  padding: 40px;
+}
+
+footer{
+  background-color: #5d4e45;
+  width: 100%;
+}
+
+footer p{
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 510px){
+  header{
+    text-align: center;
+  }
+
+  .logo1, .logo2{
+    display: inline-block;
+    margin-top: 6px;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 1030px){
+  .container{
+    padding: 0px;
+  }
+
+  .bg{
+    text-align: center;
+  }
+
+  .form-container{
+    float: none;
+    margin: 10px auto;
+    display: inline-block;
+    width: 96%;
+    max-width: 400px;
+  }
+
+  section.cover-form .bottom{
+    display: none;
+  } 
+
+  section.mosaico .flex-mosaico{
+    flex-direction: column !important;
+  }
+
+  .flex-mosaico .item1,
+  .flex-mosaico .item2{
+    width: 100%;
+    border: 0;
+  }
+
+  .flex-mosaico .item1{
+    height: 400px;
+  }
+
+  .flex-mosaico .item2{
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:1500px){
+  .container{
+    max-width: 1720px;
+  }
+
+  footer{
+    max-width: 1720px;
+  }
+}
